@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+}
+
+#gameArea {
+    width: 600px;
+    height: 400px;
+    border: 2px solid white;
+    position: relative;
+}
+
+#paddleA, #paddleB {
+    width: 10px;
+    height: 70px;
+    background-color: white;
+    position: absolute;
+}
+
+#paddleA {
+    left: 0;
+}
+
+#paddleB {
+    right: 0;
+}
+
+#ball {
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    position: absolute;
+    border-radius: 50%;
+}
+
+#scoreBoard {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-size: 2em;
+    position: absolute;
+    width: 100%;
+    top: 10px;
+}
+
+#playerScore, #opponentScore {
+    width: 50px;
+    text-align: center;
+}
