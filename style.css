@@ -12,6 +12,7 @@ body {
     height: 400px;
     border: 2px solid white;
     position: relative;
+    cursor: none;
 }
 
 #paddleA, #paddleB {
