@@ -90,9 +90,18 @@ function resetBallPosition() {
 }
 
 function resetBallSpeed() {
-    ballSpeedX = 2;
-    ballSpeedY = 2;
+    let angle = Math.random() * (90) + 45; // Adjust the range based on the desired variation
+    angle = angle * (Math.PI / 180); // Convert to radians
+
+    let direction = Math.random() < 0.5 ? -1 : 1;
+
+    const baseSpeed = 4; // Increased from 2 to 4 for a faster base speed
+    ballSpeedX = Math.cos(angle) * baseSpeed * direction;
+    ballSpeedY = Math.sin(angle) * baseSpeed;
+
+    ballSpeedY *= Math.random() < 0.5 ? -1 : 1;
 }
+
 
 function updateScoreDisplay() {
     playerScoreDisplay.textContent = playerScore;
